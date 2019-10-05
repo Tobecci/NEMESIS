@@ -17,12 +17,14 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nemesis Twitter Bot Landing Page</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
   <style>
       @import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
   </style>
@@ -30,20 +32,21 @@
 
 <body>
         <div id="app" >
-            <v-app style="background-color: rgba(29, 161, 242, 0.4);">
-                <v-container class="display-3 text-center">
-                    <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
-                </v-container>
-                <v-container class="text-center">
-                    <v-btn href="signin.php" outlined color="blue" style="background-color: white; border-radius: 20px;">log in</v-btn>
-                    <v-btn href="signup.php" outlined color="blue"  style="background-color: white;  border-radius: 20px;">Sign up</v-btn>
-                </v-container>
-
-                <v-container min-width="500px">
-                    <v-card class="mx-auto pa-6" min-width="500px" style="border-radius: 10px;">
+            <v-app >
+                   <!-- style="background-color: rgba(29, 161, 242, 0.4);"  -->
+                   <v-row>
+                       <v-col cols="12" xl="6"  md="6" xs="12" sm="12" lg="6" style="background-color: rgba(29, 161, 242, 0.4);">
+                           <v-container>
+                    <v-card color="transparent" flat class="mx-auto pa-3" max-width="500px" style="border-radius: 10px;">
+                        <v-row class="">
+                            <v-col class="d-flex flex-row justify-center">
+                                <img  src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1569341483/Team%20Nemesis_twitterBot/twitter_icon_pzp2pk.svg" alt="">
+                            </v-col>
+                           </v-row>
                         <v-row class="d-flex flex-column justify-center align-center">
-                            <h2>Enjoy your newsfeed</h2>
-                            <h2>In 3 simple steps</h2>    
+                    <div
+                    :class="{'ml-12': $vuetify.breakpoint.mdAndDown}" 
+                    style="font-family: Fugaz One; font-size: 45px;" >Nemesis Tweetbot</div>
                         </v-row>
                         <v-row class="">
                             <v-col class="d-flex flex-row justify-center">
@@ -79,35 +82,34 @@
                            </v-row>
                             
                     </v-card>
-                    <!-- <v-row>
-                        <v-col cols="12">
-                            <v-card max-width="500px" class="mx-auto text-center">
-                                    <div class="display-1">Enjoy your newsfeed</div>
-                                    <div class="display-1">In 3 simple steps</div>
-                            </v-card>
-                        </v-col>  
-                                                <v-col cols="12" >
-                            <v-card max-width="300px" class="mx-auto">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </v-card>
-                        </v-col>  
-                                                <v-col cols="12">
-                            <v-card max-width="300px" class="mx-auto">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </v-card>
-                        </v-col>  
-                    </v-row> -->
                 </v-container>
+                       </v-col>
+
+                       <v-col xs="12" sm="12" md="6" lg="6" xl="6" cols="12" class="d-flex flex-column justify-center align-center">
+                           <v-card  class="d-flex flex-column justify-center align-center pa-3" min-width="400px">
+                                <v-card-title class="text-center">Create an account</v-card-title>
+                                <v-container>
+                                    <v-form action="register.php" method="post">
+                                    <v-text-field name="name" outlined color="blue" label="Username" placeholder="enter your username" count="10"></v-text-field>
+                                      <v-text-field name="email" type="email" outlined color="blue" label="Email" placeholder="enter your email address" count="10"></v-text-field>
+                                    <v-text-field name="password" type="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
+                                    <v-text-field type="password" outlined label="Confirm Password" placeholder="enter your Password again" color="blue" count="10"></v-text-field>
+                                    <v-row class="d-flex flex-row justify-center">
+                                        <v-btn type="submit"  color="#39a2e4" dark min-width="300px">Create Account</v-btn>
+                                    </v-row>
+                                    </v-form>
+                                    <v-row class="d-flex flex-row justify-center mt-3">
+                                        <v-btn min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
+                                    </v-row>
+                                    <v-row class="d-flex flex-row justify-center mt-3">
+                                        <div class="ma-2">have an account?</div>
+                                        <v-btn class="ma-2" color="#39a2e4" dark>Sign in</v-btn>
+                                    </v-row>
+                                </v-container>
+                           </v-card>
+
+                       </v-col>
+                   </v-row>
             </v-app>
         </div>
 
