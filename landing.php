@@ -32,7 +32,7 @@
     <div id="app">
         <v-app style="background-color: rgba(29, 161, 242, 0.4);">
             <v-container class="display-3 text-center">
-                <div style="font-family: Fugaz One;">Nemesis Tweetbot confirmation</div>
+                <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
             </v-container>
             <v-container class="text-center">
                 <v-btn @click.prevent="gotoLogin" href="signin.php" outlined color="blue" style="background-color: white; border-radius: 20px;">log in</v-btn>
