@@ -32,22 +32,18 @@
 <body>
     <div id="app">
         <v-app style="background-color: rgba(29, 161, 242, 0.4);">
-            <v-app-bar dense>
-                <v-toolbar-title class="text-uppercase">Nemesis Tweetbot</v-toolbar-title>
+
+            <!-- start of navbar -->
+            <v-app-bar dense max-height="50px">
+                <v-toolbar-title style="font-family: Fugaz One;" class="">Nemesis Tweetbot</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-btn text class="ma-3"><v-icon class="mr-1 mb-1">exit_to_app</v-icon>Login</v-btn>
                 <v-btn text class="ma-3"><v-icon class="mr-1 mb-1">person_add</v-icon> Sign up</v-btn>
                 <v-btn text class=""><v-icon class="mr-1 mb-1">home</v-icon> Home</v-btn>
             </v-app-bar>
-            <v-container class="display-3 text-center">
-                <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
-            </v-container>
-            <v-container class="text-center">
-                <v-btn @click.prevent="gotoLogin" href="signin.php" outlined color="blue" style="background-color: white; border-radius: 20px;">log in</v-btn>
-                <v-btn @click.prevent="gotoRegister" href="signup.php" outlined color="blue" style="background-color: white;  border-radius: 20px;">Sign up</v-btn>
-            </v-container>
+            <!-- end of navbar -->
 
-            <v-container min-width="500px">
+            <v-container min-width="500px" class="mt-4">
                 <v-card class="mx-auto pa-6" max-width="500px" style="border-radius: 10px;">
                     <v-row class="d-flex flex-column justify-center align-center">
                         <h2>Enjoy your newsfeed</h2>
